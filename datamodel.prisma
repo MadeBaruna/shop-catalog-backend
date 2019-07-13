@@ -1,0 +1,27 @@
+type Category {
+  id: ID! @id
+  name: String!
+  pictureUrl: String!
+  order: Int!
+  products: [Product!]!
+}
+
+type Picture {
+  id: ID! @id
+  pictureUrl: String!
+}
+
+type Product {
+  id: ID! @id
+  name: String!
+  pictures: [Picture!]!
+  size: String!
+  price: Float!
+  purchaseCount: Int!
+  material: String!
+  color: String!
+  detail: String
+  sizeGuide: String
+  category: Category!
+  createdAt: DateTime! @createdAt
+}
